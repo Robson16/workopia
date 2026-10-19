@@ -1,5 +1,13 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
+    "name": "workopia",
+    "description": "Job listing website built as a personal implementation of the Laravel From Scratch course.",
+    "keywords": [
+        "laravel",
+        "workopia",
+        "job-listing",
+        "course-project"
+    ],
     "private": false,
     "type": "module",
     "scripts": {

@@ -1,1 +1,89 @@
-## Workopia
+# Workopia (Laravel)
+
+Workopia is a job listing website built with Laravel 12. This repository contains my implementation of the main project from the [Laravel From Scratch course](https://www.traversymedia.com/laravel-from-scratch).
+
+![Workopia screenshot](screens.png)
+
+## Features
+
+- Job listing CRUD
+- Authentication and authorization policies
+- Profile avatar upload
+- Blade UI components
+- Vite 7 and Tailwind CSS 4 integration
+- Bookmarking system
+- Job applications and resume uploads
+- User dashboard
+- Alpine.js interactivity
+- Database seeders
+- Job search
+- Mapbox maps
+- Email notifications with Mailtrap
+- Job listing pagination
+
+## Requirements
+
+- PHP 8.2 or later
+- Composer
+- Node.js and npm
+
+## Installation
+
+Install the PHP and JavaScript dependencies:
+
+```bash
+composer install
+npm install
+```
+
+Create your environment file and application key:
+
+```bash
+copy .env.example .env
+php artisan key:generate
+```
+
+The default environment uses SQLite. To use PostgreSQL or another supported database, update the `DB_*` values in `.env` before running migrations. Make sure the SQLite database file exists when using SQLite.
+
+Add your Mapbox API key to `.env`:
+
+```dotenv
+MAPBOX_API_KEY=
+```
+
+Run the migrations:
+
+```bash
+php artisan migrate
+```
+
+Optionally, seed the database with sample users, jobs, and bookmarks:
+
+```bash
+php artisan db:seed
+```
+
+The seeded test account is:
+
+- Email: `test@test.com`
+- Password: `12345678`
+
+## Running the Application
+
+Start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+In a second terminal, start Vite:
+
+```bash
+npm run dev
+```
+
+Open http://localhost:8000. To compile production assets, run `npm run build`.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).

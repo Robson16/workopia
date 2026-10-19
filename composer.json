@@ -1,9 +1,14 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "workopia/workopia",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Job listing website built as a personal implementation of the Laravel From Scratch course.",
+    "keywords": [
+        "laravel",
+        "workopia",
+        "job-listing",
+        "course-project"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
