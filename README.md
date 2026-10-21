@@ -26,6 +26,7 @@ Workopia is a job listing website built with Laravel 12. This repository contain
 - PHP 8.2 or later
 - Composer
 - Node.js and npm
+- Docker Desktop (with Docker Compose)
 
 ## Installation
 
@@ -43,7 +44,24 @@ copy .env.example .env
 php artisan key:generate
 ```
 
-The default environment uses SQLite. To use PostgreSQL or another supported database, update the `DB_*` values in `.env` before running migrations. Make sure the SQLite database file exists when using SQLite.
+Start the PostgreSQL database with Docker Compose:
+
+```bash
+docker compose up -d
+```
+
+Configure the database connection in `.env`:
+
+```dotenv
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=workopia
+DB_USERNAME=postgres
+DB_PASSWORD=docker
+```
+
+The PHP installation must have the `pdo_pgsql` extension enabled before running migrations.
 
 Add your Mapbox API key to `.env`:
 
